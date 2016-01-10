@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MVCDifferentViewEngines.Models.Employee>
+
+@{
+    ViewBag.Title = "RazorIndex";
+}
+
+<h2>RazorIndex</h2>
+<div style="font-family:Arial">
+    <fieldset>
+        <legend>Employee Using Razor Engine</legend>
+        @foreach (var emp in Model)
+        {
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Name)  @Html.DisplayFor(model => emp.Name)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Designation) @Html.DisplayFor(model => emp.Designation)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Role) @Html.DisplayFor(model => emp.Role)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Gender) @Html.DisplayFor(model => emp.Gender)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Salary) @Html.DisplayFor(model => emp.Salary)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.City) @Html.DisplayFor(model => emp.City)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.State) @Html.DisplayFor(model => emp.State)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Zip) @Html.DisplayFor(model => emp.Zip)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Address) @Html.DisplayFor(model => emp.Address)
+            </div>
+            <div>---------------------------------</div>
+        }
+    </fieldset>
+</div>
